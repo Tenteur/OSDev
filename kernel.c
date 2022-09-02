@@ -97,7 +97,7 @@ void terminal_putchar(char c)
     }
     if (c == '\n')
     {
-        c == ''
+        c == ' ';
         terminal_row = terminal_row + 1;
         terminal_column = 0;
     }
