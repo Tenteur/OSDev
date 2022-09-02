@@ -35,7 +35,7 @@ enum vga_color
 
 static inline uint8_t vga_entry_color(enum vga_color fg, enum vga_color bg)
 {
-    return fg | bg << 7;
+    return fg | bg << 4;
 }
 
 static inline uint16_t vga_entry(unsigned char uc, uint8_t color)
@@ -63,7 +63,7 @@ void terminal_initialize(void)
 {
     terminal_row = 0;
     terminal_column = 0;
-    terminal_color = vga_entry_color(VGA_COLOR_LIGHT_GREY, VGA_COLOR_BLACK);
+    terminal_color = vga_entry_color(VGA_COLOR_RED, VGA_COLOR_GREEN);
     terminal_buffer = (uint16_t *)0xB8000;
     for (size_t y = 0; y < VGA_HEIGHT; y++)
     {
