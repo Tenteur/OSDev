@@ -95,6 +95,12 @@ void terminal_putchar(char c)
         if (++terminal_row == VGA_HEIGHT)
             terminal_row = 0;
     }
+    if (c == '\n')
+    {
+        terminal_row = terminal_row + 1;
+        terminal_column = 0;
+    }
+
 }
 
 void terminal_write(const char *data, size_t size)
@@ -115,4 +121,5 @@ void kernel_main(void)
 
     /* Newline support is left as an exercise. */
     terminal_writestring("Hello, kernel World!\n");
+    terminal_writestring("doeas this worked ?")
 }
