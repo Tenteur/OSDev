@@ -33,8 +33,12 @@ void terminal_setcolor(uint8_t color) {
 	terminal_color = color;
 }
 
-void terminal_changecolor(){
-	terminal_setcolor(VGA_COLOR_BLUE);
+void terminal_changecolor(int colornumber){
+	if (colornumber = 0)
+	{
+		terminal_setcolor(VGA_COLOR_BLUE);
+	}
+	
 }
 
 void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
