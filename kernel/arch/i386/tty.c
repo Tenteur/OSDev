@@ -46,6 +46,10 @@ void terminal_putchar(char c) {
 		if (++terminal_row == VGA_HEIGHT)
 			terminal_row = 0;
 	}
+	if (c == '\n'){
+		terminal_column = terminal_column + 1
+		terminal_row = 0;
+	}
 }
 
 void terminal_write(const char* data, size_t size) {
