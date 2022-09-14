@@ -50,8 +50,12 @@ void terminal_putchar(char c) {
 		terminal_row = terminal_row + 1;
 		terminal_column = 0;
 	}
-	if (c == '\r'){
-		terminal_setcolor(VGA_COLOR_BLUE);
+	if (c == '\c'){
+		if (c == '/BL')
+		{
+			
+		}
+		
 	}
 }
 
