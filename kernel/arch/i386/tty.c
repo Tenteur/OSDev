@@ -36,7 +36,7 @@ void terminal_setcolor(uint8_t color) {
 void terminal_changecolor(int colornumber){
 	if (colornumber = 0)
 	{
-		terminal_setcolor(VGA_COLOR_BLUE);
+		terminal_setcolor((VGA_COLOR_BLUE));
 	}
 	
 }
