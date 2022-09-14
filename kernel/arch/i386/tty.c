@@ -50,7 +50,7 @@ void terminal_putchar(char c) {
 		terminal_row = terminal_row + 1;
 		terminal_column = 0;
 	}
-	if (c == '\fb'){
+	if (c = '\fb'){
 			terminal_setcolor(VGA_COLOR_BLUE);
 	}
 }
