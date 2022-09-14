@@ -47,8 +47,11 @@ void terminal_putchar(char c) {
 			terminal_row = 0;
 	}
 	if (c == '\n'){
-		terminal_column = terminal_column + 1;
-		terminal_row = 0;
+		terminal_row = terminal_row + 1;
+		terminal_column = 0;
+	}
+	if (c == '\r'){
+		terminal_setcolor(VGA_COLOR_BLUE);
 	}
 }
 
