@@ -53,7 +53,7 @@ void terminal_putchar(char c) {
 	if (c == '\c'){
 		if (c == '/BL')
 		{
-			
+			terminal_setcolor(VGA_COLOR_BLUE)
 		}
 		
 	}
