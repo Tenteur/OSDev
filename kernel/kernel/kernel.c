@@ -8,7 +8,7 @@ void kernel_main(void) {
 	printf("this is now a new line !\n is this a newline ?\n");
 	terminal_changecolor(0);
 	printf("now change the color !");
-	printf(inportb(0x64))
-	printf(inportb(0x60))
-	printf(outportb(0x64))
+	printf(inportb(0x64));
+	printf(inportb(0x60));
+	printf(outportb(0x64));
 }
