@@ -50,7 +50,7 @@ void terminal_putchar(char c) {
 
 void change_color(uint8_t color) {
 	if (color = 1) {
-		terminal_buffer = VGA_COLOR_BLUE, VGA_COLOR_BLACK;
+		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_BLACK);
 	}
 }
 
