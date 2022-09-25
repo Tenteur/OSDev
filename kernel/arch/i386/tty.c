@@ -7,6 +7,7 @@
 
 #include "vga.h"
 
+// définir la taille du terminal
 static const size_t VGA_WIDTH = 80;
 static const size_t VGA_HEIGHT = 25;
 static uint16_t* const VGA_MEMORY = (uint16_t*) 0xB8000;
@@ -16,9 +17,12 @@ static size_t terminal_column;
 static uint8_t terminal_color;
 static uint16_t* terminal_buffer;
 
+// initialiser le terminal (couleur, emplacement du texte)
 void terminal_initialize(void) {
 	terminal_row = 0;
 	terminal_column = 0;
+	terminal_bg_color = VGA_COLOR_BLACK;
+	terminal_font_color = VGA_COLOR_LIGHT_GREY;
 	terminal_color = vga_entry_color(VGA_COLOR_LIGHT_GREY, VGA_COLOR_BLACK);
 	terminal_buffer = VGA_MEMORY;
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
@@ -29,11 +33,13 @@ void terminal_initialize(void) {
 	}
 }
 
+// fonction à définir...
 void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
 	const size_t index = y * VGA_WIDTH + x;
 	terminal_buffer[index] = vga_entry(c, color);
 }
 
+// 'définir' le caractère a écrire et l'envoyer dans la fonction 'terminal_putentryat'
 void terminal_putchar(char c) {
 	unsigned char uc = c;
 	terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
@@ -48,11 +54,15 @@ void terminal_putchar(char c) {
 	}
 }
 
-void change_color(uint8_t color) {
-	if (color == "red") {
-		terminal_color = vga_entry_color(VGA_COLOR_RED, VGA_COLOR_BLACK);
+// fonction pour changer la couleur du texte et du fond
+void change_color(const char* color, const char* fb) {
+	if (fbc == "bg") {
+		vga_entry_color(VGA_COLOR_DARK_GREY, VGA_COLOR_BLUE);
+	} else if (fbc == "f") {
+		vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_DARK_GREY);
 	}
 }
+
 
 void terminal_write(const char* data, size_t size) {
 	for (size_t i = 0; i < size; i++)
