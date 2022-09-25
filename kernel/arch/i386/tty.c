@@ -21,8 +21,8 @@ static uint16_t* terminal_buffer;
 void terminal_initialize(void) {
 	terminal_row = 0;
 	terminal_column = 0;
-	terminal_bg_color = VGA_COLOR_BLACK;
-	terminal_font_color = VGA_COLOR_LIGHT_GREY;
+	//terminal_bg_color = VGA_COLOR_BLACK;
+	//terminal_font_color = VGA_COLOR_LIGHT_GREY;
 	terminal_color = vga_entry_color(VGA_COLOR_LIGHT_GREY, VGA_COLOR_BLACK);
 	terminal_buffer = VGA_MEMORY;
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
