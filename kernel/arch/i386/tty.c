@@ -49,8 +49,8 @@ void terminal_putchar(char c) {
 }
 
 void change_color(uint8_t color) {
-	if (color = 1) {
-		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_BLACK);
+	if (color == "red") {
+		terminal_color = vga_entry_color(VGA_COLOR_RED, VGA_COLOR_BLACK);
 	}
 }
 
