@@ -7,7 +7,7 @@ void kernel_main(void) {
 	printf("Hello, kernel World!\n");
 	change_color("red", "bg");
 	printf("this is now a new line !\n");
-	change_color("0", "0");
+	change_color(0, 0);
 	printf("now change the color !");
 	//printf(inportb(0x64));
 	//printf(inportb(0x60));
