@@ -17,6 +17,9 @@ static size_t terminal_column;
 static uint8_t terminal_color;
 static uint16_t* terminal_buffer;
 
+static uint8_t ttet;
+static uint8_t ttee;
+
 // initialiser le terminal (couleur, emplacement du texte)
 void terminal_initialize(void) {
 	terminal_row = 0;
@@ -56,8 +59,9 @@ void terminal_putchar(char c) {
 
 // fonction pour changer la couleur du texte et du fond
 void change_color(uint8_t color) {
-	static uint8_t ttet = "VGA_COLOR_BLACK";
-	static uint8_t ttee = "VGA_COLOR_LIGHT_BLUE";
+
+	ttet = VGA_COLOR_BROWN;
+	ttee = VGA_COLOR_LIGHT_BROWN;
 
 	if (color == 1) {
 		terminal_color = vga_entry_color(ttet, ttee);
