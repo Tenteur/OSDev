@@ -5,7 +5,6 @@
 void kernel_main(void) {
 	terminal_initialize();
 	printf("Hello, kernel World!\n");
-	change_color("red", "bg");
 	printf("this is now a new line !\n");
 	change_color(0, 0);
 	printf("now change the color !");
