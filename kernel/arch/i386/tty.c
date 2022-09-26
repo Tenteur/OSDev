@@ -55,7 +55,7 @@ void terminal_putchar(char c) {
 }
 
 // fonction pour changer la couleur du texte et du fond
-void change_color(const char* color, const char* fbc) {
+void change_color(uint8_t color, uint8_t fbc) {
 	if (fbc == 0) {
 		vga_entry_color(VGA_COLOR_DARK_GREY, VGA_COLOR_BLUE);
 	} else if (fbc == 0) {
