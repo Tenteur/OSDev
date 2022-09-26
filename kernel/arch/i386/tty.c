@@ -54,6 +54,7 @@ void terminal_putchar(char c) {
 	if (c == '\n'){
 		terminal_row = terminal_row + 1;
 		terminal_column = 0;
+		terminal_color = vga_entry_color(VGA_COLOR_BLACK, VGA_COLOR_BLACK);
 	}
 }
 
