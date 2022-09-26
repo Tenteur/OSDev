@@ -17,8 +17,8 @@ static size_t terminal_column;
 static uint8_t terminal_color;
 static uint16_t* terminal_buffer;
 
-static uint8_t ttet;
-static uint8_t ttee;
+static uint8_t font_color;
+static uint8_t back_color;
 
 // initialiser le terminal (couleur, emplacement du texte)
 void terminal_initialize(void) {
@@ -58,22 +58,40 @@ void terminal_putchar(char c) {
 }
 
 // fonction pour changer la couleur du texte et du fond
-void change_color(uint8_t color) {
+void change_color(uint8_t fcolor, uint8_t bgcolor) {
 
-	ttet = VGA_COLOR_RED;
-	ttee = VGA_COLOR_BLUE;
+	font_color = ;
+	back_color = ;
 
-	if (color == 1) {
-		terminal_color = vga_entry_color(ttet, ttee);
-	}else if (color == 2) {
-		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_GREEN);
-	}else if (color == 3) {
-		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_GREEN);
-	}else if (color == 4) {
-		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_GREEN);
-	}else if (color == 5) {
-		terminal_color = vga_entry_color(VGA_COLOR_BLUE, VGA_COLOR_GREEN);
+	if (fcolor == 1) {
+		font_color = VGA_COLOR_BLUE;
+	}else if (fcolor == 2) {
+		font_color = VGA_COLOR_GREEN;
+	}else if (fcolor == 3) {
+		font_color = VGA_COLOR_RED;
+	}else if (fcolor == 4) {
+		font_color = VGA_COLOR_WHITE;
+	}else if (fcolor == 5) {
+		font_color = VGA_COLOR_BLACK;
 	}
+
+	if (bgcolor == 1) {
+		back_color = VGA_COLOR_BLUE;
+	}
+	else if (bgcolor == 2) {
+		back_color = VGA_COLOR_GREEN;
+	}
+	else if (bgcolor == 3) {
+		back_color = VGA_COLOR_RED;
+	}
+	else if (bgcolor == 4) {
+		back_color = VGA_COLOR_WHITE;
+	}
+	else if (bgcolor == 5) {
+		back_color = VGA_COLOR_BLACK;
+	}
+
+	terminal_color = vga_entry_color(font_color, back_color);
 }
 
 
