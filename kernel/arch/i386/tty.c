@@ -45,6 +45,9 @@ void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
 // 'définir' le caractère a écrire et l'envoyer dans la fonction 'terminal_putentryat'
 void terminal_putchar(char c) {
 	unsigned char uc = c;
+	if (c == '\n') {
+		terminal_color = vga_entry_color(VGA_COLOR_BLACK, VGA_COLOR_BLACK);
+	}
 	terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
 	if (++terminal_column == VGA_WIDTH) {
 		terminal_column = 0;
@@ -54,7 +57,6 @@ void terminal_putchar(char c) {
 	if (c == '\n'){
 		terminal_row = terminal_row + 1;
 		terminal_column = 0;
-		terminal_color = vga_entry_color(VGA_COLOR_BLACK, VGA_COLOR_BLACK);
 	}
 }
 
