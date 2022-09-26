@@ -60,8 +60,8 @@ void terminal_putchar(char c) {
 // fonction pour changer la couleur du texte et du fond
 void change_color(uint8_t color) {
 
-	ttet = VGA_COLOR_BROWN;
-	ttee = VGA_COLOR_LIGHT_BROWN;
+	ttet = VGA_COLOR_RED;
+	ttee = VGA_COLOR_BLUE;
 
 	if (color == 1) {
 		terminal_color = vga_entry_color(ttet, ttee);
