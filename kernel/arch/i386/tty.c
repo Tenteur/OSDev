@@ -60,9 +60,6 @@ void terminal_putchar(char c) {
 // fonction pour changer la couleur du texte et du fond
 void change_color(uint8_t fcolor, uint8_t bgcolor) {
 
-	font_color = ;
-	back_color = ;
-
 	if (fcolor == 1) {
 		font_color = VGA_COLOR_BLUE;
 	}else if (fcolor == 2) {
