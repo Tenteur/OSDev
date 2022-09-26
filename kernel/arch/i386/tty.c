@@ -12,6 +12,9 @@ static const size_t VGA_WIDTH = 80;
 static const size_t VGA_HEIGHT = 25;
 static uint16_t* const VGA_MEMORY = (uint16_t*) 0xB8000;
 
+static char ttet = "";
+static char ttee = "";
+
 static size_t terminal_row;
 static size_t terminal_column;
 static uint8_t terminal_color;
@@ -56,8 +59,8 @@ void terminal_putchar(char c) {
 
 // fonction pour changer la couleur du texte et du fond
 void change_color(uint8_t color) {
-	ttet = VGA_COLOR_BLACK;
-	ttee = VGA_COLOR_LIGHT_BLUE;
+	ttet = "VGA_COLOR_BLACK";
+	ttee = "VGA_COLOR_LIGHT_BLUE";
 
 	if (color == 1) {
 		terminal_color = vga_entry_color(ttet, ttee);
