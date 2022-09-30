@@ -20,6 +20,9 @@ static uint16_t* terminal_buffer;
 static uint8_t font_color;
 static uint8_t back_color;
 
+font_color = VGA_COLOR_WHITE;
+back_color = VGA_COLOR_BLACK;
+
 // initialiser le terminal (couleur, emplacement du texte)
 void terminal_initialize(void) {
 	terminal_row = 0;
@@ -49,10 +52,12 @@ void terminal_putchar(char c) {
 		terminal_color = vga_entry_color(VGA_COLOR_BLACK, VGA_COLOR_BLACK);
 	}
 	terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
+	terminal_color = vga_entry_color(font_color, back_color);
 	if (++terminal_column == VGA_WIDTH) {
 		terminal_column = 0;
-		if (++terminal_row == VGA_HEIGHT)
+		if (++terminal_row == VGA_HEIGHT) {
 			terminal_row = 0;
+		}
 	}
 	if (c == '\n'){
 		terminal_row = terminal_row + 1;
