@@ -2,7 +2,6 @@
 
 #include <kernel/tty.h>
 #include <kernel/char.h>
-#include <time.h>
 
 /* data declaration */
 time_t start, end;
