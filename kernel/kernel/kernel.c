@@ -63,7 +63,7 @@ void test_input()
     do {
         keycode = get_input_keycode();
         if (keycode == KEY_ENTER) {
-            print_new_line();
+            printf("\n")
         }
         else {
             ch = get_ascii_char(keycode);
