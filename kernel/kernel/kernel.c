@@ -66,7 +66,6 @@ void test_input()
             printf("\n");
         }
         else {
-            ch = get_ascii_char(keycode);
             printf("key detected !");
         }
         sleep(0x02FFFFFF);
