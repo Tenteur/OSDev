@@ -3,9 +3,6 @@
 #include <kernel/tty.h>
 #include <kernel/char.h>
 
-/* data declaration */
-time_t start, end;
-
 void kernel_main(void) {
 	terminal_initialize();
 	printf("Hello, kernel World!\n");
