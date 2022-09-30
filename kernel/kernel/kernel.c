@@ -63,11 +63,11 @@ void test_input()
     do {
         keycode = get_input_keycode();
         if (keycode == KEY_ENTER) {
-            printf("\n")
+            printf("\n");
         }
         else {
             ch = get_ascii_char(keycode);
-            printf(ch);
+            printf("key detected !");
         }
         sleep(0x02FFFFFF);
     } while (ch > 0);
