@@ -17,11 +17,9 @@ static size_t terminal_column;
 static uint8_t terminal_color;
 static uint16_t* terminal_buffer;
 
-static uint8_t font_color;
-static uint8_t back_color;
+static uint8_t font_color = VGA_COLOR_WHITE;
+static uint8_t back_color = VGA_COLOR_BLACK;
 
-font_color = VGA_COLOR_WHITE;
-back_color = VGA_COLOR_BLACK;
 
 // initialiser le terminal (couleur, emplacement du texte)
 void terminal_initialize(void) {
