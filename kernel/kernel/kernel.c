@@ -2,7 +2,10 @@
 
 #include <kernel/tty.h>
 #include <kernel/char.h>
+#include <time.h>
 
+/* data declaration */
+time_t start, end;
 
 void kernel_main(void) {
 	terminal_initialize();
@@ -53,7 +56,7 @@ void wait_for_io(uint32 timer_count)
 
 void sleep(uint32 timer_count)
 {
-    wait_for_io(timer_count);
+    wait_for_io(20);
 }
 
 void test_input()
