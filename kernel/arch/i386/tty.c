@@ -128,5 +128,5 @@ void terminal_writestring(const char* data) {
 	target[5] = source.access_byte;
 
 	// Encode the flags
-	target[6] |= (source.flags << 4)
+	target[6] |= (source.flags << 4);
 } 
