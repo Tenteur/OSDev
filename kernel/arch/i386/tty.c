@@ -107,7 +107,7 @@ void terminal_writestring(const char* data) {
 	terminal_write(data, strlen(data));
 }
 
- void encodeGdtEntry(uint8_t* target, struct GDT source) {
+ /*void encodeGdtEntry(uint8_t* target, struct GDT source) {
 	// Check the limit to make sure that it can be encoded
 	if (source.limit > 0xFFFFF) {
 		printf("GDT cannot encode limits larger than 0xFFFFF");
@@ -129,4 +129,4 @@ void terminal_writestring(const char* data) {
 
 	// Encode the flags
 	target[6] |= (source.flags << 4);
-} 
+} */

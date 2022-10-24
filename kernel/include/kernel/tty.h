@@ -1,3 +1,4 @@
+/*
 #ifndef _KERNEL_TTY_H
 #define _KERNEL_TTY_H
 
@@ -13,3 +14,4 @@ void change_color(uint8_t color, uint8_t bgcolor);
 void encodeGdtEntry(uint8_t* target, struct GDT source);
 
 #endif
+*/
