@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include <kernel/tty.h>
-#include "kernel.h"
+#include "../include/kernel/kernel.h"
 
 
 void kernel_main(void) {
