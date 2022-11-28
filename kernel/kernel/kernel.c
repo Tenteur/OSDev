@@ -11,7 +11,7 @@
 void kernel_main(void) {
 	change_color(0, 0);
 	terminal_initialize();
-	char hellomess = "kernel world";
+	char* hellomess = "kernel world";
 	printf("Hello,", hellomess, "!\n");
 	change_color(4, 2);
 	printf("this is now a new line !\n");
@@ -21,5 +21,7 @@ void kernel_main(void) {
 
 void execute_command(char* input)
 {
+	change_color(4, 5);
+	printf("Listening Inputs...");
 
 }
