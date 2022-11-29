@@ -7,6 +7,10 @@
 #include "../include/kernel/timer.h"
 #include "../include/kernel/drivers/keyboard.h"
 
+void start_kernel() {
+	printf("Installing interrupt service routines (ISRs).\n");
+	isr_install();
+}
 
 void kernel_main(void) {
 	change_color(0, 0);
