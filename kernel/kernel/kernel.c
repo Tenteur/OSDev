@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 #include <kernel/tty.h>
+#include "../include/kernel/util.h"
 #include "../include/kernel/kernel.h"
+#include "../include/kernel/mem.h"
 #include "../include/kernel/idt.h"
 #include "../include/kernel/isr.h"
 #include "../include/kernel/timer.h"
