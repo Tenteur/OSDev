@@ -1,8 +1,8 @@
 #include <stdio.h>
 
+#include <kernel/tty.h>
 #include "isr.h"
 #include "idt.h"
-#include "../drivers/display.h"
 #include "../include/kernel/ports.h"
 #include "../include/kernel/util.h"
 
