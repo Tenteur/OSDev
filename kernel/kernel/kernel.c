@@ -7,13 +7,12 @@
 #include "../include/kernel/timer.h"
 #include "../include/kernel/drivers/keyboard.h"
 
-void start_kernel() {
-	printf("Installing interrupt service routines (ISRs).\n");
-	isr_install();
-}
+//void start_kernel() {
+//	printf("Installing interrupt service routines (ISRs).\n");
+//	//isr_install();
+//}
 
 void kernel_main(void) {
-	change_color(0, 0);
 	terminal_initialize();
 	char* hellomess = "kernel world";
 	printf("Hello,", hellomess, "!\n");
