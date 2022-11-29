@@ -9,16 +9,17 @@
 #include "../include/kernel/timer.h"
 #include "../include/kernel/drivers/keyboard.h"
 
-void start_kernel() {
+void start_kernel(void) {
 	printf("Installing interrupt service routines (ISRs).\n");
 }
 
 void kernel_main(void) {
-	//isr_install();
+	isr_install();
 	terminal_initialize();
 	printf("Hello kernel world!\n");
 	change_color(1, 3);
 	printf("now change the color !");
+	execute_command();
 }
 
 void execute_command(char* input)
