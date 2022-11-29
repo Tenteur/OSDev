@@ -11,10 +11,10 @@
 
 void start_kernel() {
 	printf("Installing interrupt service routines (ISRs).\n");
-	isr_install();
 }
 
 void kernel_main(void) {
+	//isr_install();
 	terminal_initialize();
 	printf("Hello kernel world!\n");
 	change_color(1, 3);
