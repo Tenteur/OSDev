@@ -14,8 +14,8 @@
 
 void kernel_main(void) {
 	terminal_initialize();
-	char* hellomess = "kernel world";
-	printf("Hello,", hellomess, "!\n");
+	char c = "kernel world!";
+	printf("c=%c\n", c);
 	change_color(4, 2);
 	printf("this is now a new line !\n");
 	change_color(1, 3);
