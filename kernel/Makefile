@@ -35,7 +35,6 @@ kernel/mem.o \
 kernel/ports.o \
 kernel/timer.o \
 kernel/util.o \
-kernel/interrupt.o \
 kernel/drivers/keyboard.o \
 
 OBJS=\
